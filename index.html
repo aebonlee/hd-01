@@ -408,6 +408,13 @@
       .about-grid, .cta-box { grid-template-columns: 1fr; }
       .about-media { min-height: 520px; order: 2; }
       .about-media img { min-height: 520px; }
+      /* 원 배지는 컨테이너 **바깥으로 28px 걸치도록** 만든 장식이다(right:-28px).
+         그런데 컨테이너 좌우 여백은 20px 뿐이라, 걸친 28px 중 8px 이
+         화면 밖으로 나가 **가로 스크롤**이 생긴다.
+         2열일 때는 배지가 두 칸 사이에 들어가 문제가 없고,
+         **1열이 되는 이 폭부터** 드러난다(821~1024px 에서 8px).
+         그래서 여기서 걸침을 없애 안쪽으로 들인다. */
+      .about-badge { right: 16px; }
       .service-grid { grid-template-columns: repeat(2, 1fr); }
       .process { grid-template-columns: repeat(3, 1fr); gap: 32px 10px; }
       .portfolio-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 360px 280px 280px; }
@@ -429,11 +436,6 @@
       .trust-items { grid-template-columns: 1fr 1fr; }
       .review-grid { grid-template-columns: 1fr; }
       .scroll-cue { display: none; }
-      /* 원 배지는 데스크톱에서 일부러 바깥으로 걸치게 뒀다(right:-28px).
-         그런데 이 폭부터는 사진이 화면 끝까지 차서, 걸친 만큼이 그대로
-         **화면 밖으로 나가 가로 스크롤**이 생긴다(768px 에서 8px).
-         걸침을 없애 안쪽으로 들인다 — 아래 620px 구간과 같은 처리다. */
-      .about-badge { right: 16px; }
     }
 
     @media (max-width: 620px) {

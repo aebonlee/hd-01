@@ -429,6 +429,11 @@
       .trust-items { grid-template-columns: 1fr 1fr; }
       .review-grid { grid-template-columns: 1fr; }
       .scroll-cue { display: none; }
+      /* 원 배지는 데스크톱에서 일부러 바깥으로 걸치게 뒀다(right:-28px).
+         그런데 이 폭부터는 사진이 화면 끝까지 차서, 걸친 만큼이 그대로
+         **화면 밖으로 나가 가로 스크롤**이 생긴다(768px 에서 8px).
+         걸침을 없애 안쪽으로 들인다 — 아래 620px 구간과 같은 처리다. */
+      .about-badge { right: 16px; }
     }
 
     @media (max-width: 620px) {
